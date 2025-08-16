@@ -1,0 +1,3 @@
+$latex = 'uplatex';
+$bibtex = 'pbibtex';
+$dvipdf = 'dvipdfmx %O -o %D %S';
