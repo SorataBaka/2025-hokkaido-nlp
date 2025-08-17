@@ -1,8 +1,7 @@
 import numpy as np
 from torch import i0
 from load_dataset import process_dataset
-from create_buckets import create_buckets
-from build_dataset import build_dataset_random, calculate_label_ratio
+from build_dataset import build_dataset_random
 from tokenizer_functions import get_tokens
 from train_model import train
 import warnings
@@ -17,7 +16,7 @@ print(f"Dataset loaded and processed. Loaded {len(training_dataset_reduced)} tra
 
 print("Building final dataset...")
 
-for i in range(100, training_dataset_reduced.num_rows, 100):
+for i in range(2800, 6100, 100):
   print(f"Processing {i} samples...")
   final_train_dataset, final_test_dataset = build_dataset_random(training_dataset_reduced, i)
 
